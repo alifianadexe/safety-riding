@@ -1,0 +1,910 @@
+[gd_scene load_steps=24 format=1]
+
+[ext_resource path="res://script/perilaku-1.gd" type="Script" id=1]
+[ext_resource path="res://images/Background/background-daylight.png" type="Texture" id=2]
+[ext_resource path="res://images/logo_4.png" type="Texture" id=3]
+[ext_resource path="res://images/title-perilaku_03.png" type="Texture" id=4]
+[ext_resource path="res://font/BebasNeue-48.fnt" type="BitmapFont" id=5]
+[ext_resource path="res://images/perilaku/Perlengkpan_08.png" type="Texture" id=6]
+[ext_resource path="res://font/BebasNeue.fnt" type="BitmapFont" id=7]
+[ext_resource path="res://images/perilaku/Perlengkpan_09.png" type="Texture" id=8]
+[ext_resource path="res://images/perilaku/Perlengkpan_01.png" type="Texture" id=9]
+[ext_resource path="res://images/perilaku/Perlengkpan_04.png" type="Texture" id=10]
+[ext_resource path="res://images/perilaku/Perlengkpan_06.png" type="Texture" id=11]
+[ext_resource path="res://images/perilaku/Perlengkpan_10.png" type="Texture" id=12]
+[ext_resource path="res://images/perilaku/Perlengkpan_02.png" type="Texture" id=13]
+[ext_resource path="res://images/info_14.png" type="Texture" id=14]
+[ext_resource path="res://images/Bahan-21_12.png" type="Texture" id=15]
+[ext_resource path="res://images/info_16.png" type="Texture" id=16]
+[ext_resource path="res://images/Bahan-21_13.png" type="Texture" id=17]
+[ext_resource path="res://images/info_17.png" type="Texture" id=18]
+[ext_resource path="res://images/Bahan-21_14.png" type="Texture" id=19]
+[ext_resource path="res://images/1layout-popup.png" type="Texture" id=20]
+[ext_resource path="res://images/layout-popup_06.png" type="Texture" id=21]
+[ext_resource path="res://images/layout-popup_07.png" type="Texture" id=22]
+
+[sub_resource type="Animation" id=1]
+
+resource/name = "positionContainer"
+length = 0.75
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("PanelContainer:rect/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.6 ),
+"transitions": FloatArray( 0.25, 0.25 ),
+"update": 0,
+"values": [ Vector2( 0, 321 ), Vector2( -800, 321 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("../..")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 0.6 ),
+"transitions": FloatArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "disabled_button"
+}, {
+"args": [  ],
+"method": "enabled_button"
+} ]
+}
+
+[node name="Control" type="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 2.0
+margin/right = 40.0
+margin/bottom = 42.0
+script/script = ExtResource( 1 )
+
+[node name="Container" type="Container" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 798.0
+margin/bottom = 1281.0
+
+[node name="TextureFrame" type="TextureFrame" parent="Container"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 800.0
+margin/bottom = 1280.0
+texture = ExtResource( 2 )
+stretch_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Container"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 6135.0
+margin/bottom = 1159.0
+alignment = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Container/VBoxContainer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 6135.0
+margin/bottom = 213.0
+custom_constants/margin_top = 20
+custom_constants/margin_left = 25
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Container/VBoxContainer/MarginContainer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 25.0
+margin/top = 20.0
+margin/right = 6135.0
+margin/bottom = 213.0
+custom_constants/separation = 30
+alignment = 0
+
+[node name="TextureFrame" type="TextureFrame" parent="Container/VBoxContainer/MarginContainer/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 137.0
+margin/bottom = 193.0
+texture = ExtResource( 3 )
+stretch_mode = 0
+
+[node name="TextureFrame1" type="TextureFrame" parent="Container/VBoxContainer/MarginContainer/HBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 167.0
+margin/top = 0.0
+margin/right = 724.0
+margin/bottom = 193.0
+texture = ExtResource( 4 )
+stretch_mode = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="Container/VBoxContainer"]
+
+editor/display_folded = true
+visibility/blend_mode = 3
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 217.0
+margin/right = 6135.0
+margin/bottom = 1061.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Container/VBoxContainer/PanelContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 7.0
+margin/top = 7.0
+margin/right = 6128.0
+margin/bottom = 837.0
+alignment = 0
+
+[node name="MarginContainer 2" type="MarginContainer" parent="Container/VBoxContainer/PanelContainer/HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 792.0
+margin/bottom = 830.0
+custom_constants/margin_right = 59
+custom_constants/margin_top = 20
+custom_constants/margin_left = 31
+custom_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Container/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer 2"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 31.0
+margin/top = 20.0
+margin/right = 733.0
+margin/bottom = 810.0
+custom_constants/separation = 20
+alignment = 0
+
+[node name="Label 2" type="Label" parent="Container/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer 2/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 702.0
+margin/bottom = 46.0
+custom_fonts/font = ExtResource( 5 )
+text = "Memeriksa kendaraan sebelum berkendara"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="TextureFrame" type="TextureFrame" parent="Container/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer 2/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 66.0
+margin/right = 702.0
+margin/bottom = 491.0
+texture = ExtResource( 6 )
+stretch_mode = 4
+
+[node name="Label1" type="Label" parent="Container/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer 2/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 511.0
+margin/right = 702.0
+margin/bottom = 660.0
+custom_fonts/font = ExtResource( 7 )
+text = "Periksalah kendaaran anda sebelum berkendara agar 
+keselamatan anda dapat terjaga. Beberapa hal yang 
+harus diperiksa seperti kelistrikan atau lampu, bensin,
+rem, plat nomor, dan lain-lain."
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="MarginContainer4" type="MarginContainer" parent="Container/VBoxContainer/PanelContainer/HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 796.0
+margin/top = 0.0
+margin/right = 1588.0
+margin/bottom = 830.0
+custom_constants/margin_right = 59
+custom_constants/margin_top = 20
+custom_constants/margin_left = 51
+custom_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Container/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer4"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 51.0
+margin/top = 20.0
+margin/right = 733.0
+margin/bottom = 810.0
+custom_constants/separation = 20
+alignment = 0
+
+[node name="Label 2" type="Label" parent="Container/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer4/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 682.0
+margin/bottom = 46.0
+custom_fonts/font = ExtResource( 5 )
+text = "Menggunakan perlengkapan lengkap"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="TextureFrame" type="TextureFrame" parent="Container/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer4/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 66.0
+margin/right = 682.0
+margin/bottom = 482.0
+texture = ExtResource( 8 )
+stretch_mode = 4
+
+[node name="Label1" type="Label" parent="Container/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer4/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 502.0
+margin/right = 682.0
+margin/bottom = 689.0
+custom_fonts/font = ExtResource( 7 )
+text = "Menggunakan perlengkapan dengan lengkap dan benar 
+akan mengurangi kemungkinan buruk yang akan terjadi. 
+Semua perlengkapan mempunyai fungsi masing-masing 
+dan fungsi utamanya adalah agar pengendara dapat 
+berkendara dengan nyaman dan aman."
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="MarginContainer5" type="MarginContainer" parent="Container/VBoxContainer/PanelContainer/HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1592.0
+margin/top = 0.0
+margin/right = 2394.0
+margin/bottom = 830.0
+custom_constants/margin_right = 59
+custom_constants/margin_top = 20
+custom_constants/margin_left = 32
+custom_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Container/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer5"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 32.0
+margin/top = 20.0
+margin/right = 743.0
+margin/bottom = 810.0
+custom_constants/separation = 20
+alignment = 0
+
+[node name="Label 2" type="Label" parent="Container/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer5/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 711.0
+margin/bottom = 46.0
+custom_fonts/font = ExtResource( 5 )
+text = "Berkendara saat keadaan fit"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="TextureFrame" type="TextureFrame" parent="Container/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer5/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 66.0
+margin/right = 711.0
+margin/bottom = 468.0
+texture = ExtResource( 9 )
+stretch_mode = 4
+
+[node name="Label1" type="Label" parent="Container/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer5/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 488.0
+margin/right = 711.0
+margin/bottom = 713.0
+custom_fonts/font = ExtResource( 7 )
+text = "Jangan pernah berkendara saat keadaan mabuk ataupun 
+mengantuk, tidak hanya membahayakan pengendara itu 
+sendiri tetapi juga membahayakan pengendara lain dan 
+juga pejalan kaki. Usahakan  pengendara beristirahat dan 
+berhenti jika mengantuk, jangan memaksakan untuk 
+berkendara jika keadaan tidak fit."
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="MarginContainer6" type="MarginContainer" parent="Container/VBoxContainer/PanelContainer/HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 2398.0
+margin/top = 0.0
+margin/right = 3190.0
+margin/bottom = 830.0
+custom_constants/margin_right = 59
+custom_constants/margin_top = 20
+custom_constants/margin_left = 57
+custom_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Container/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer6"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 57.0
+margin/top = 20.0
+margin/right = 733.0
+margin/bottom = 810.0
+custom_constants/separation = 20
+alignment = 0
+
+[node name="Label 2" type="Label" parent="Container/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer6/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 676.0
+margin/bottom = 46.0
+custom_fonts/font = ExtResource( 5 )
+text = "Fokus kepada jalan raya"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="TextureFrame" type="TextureFrame" parent="Container/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer6/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 66.0
+margin/right = 676.0
+margin/bottom = 469.0
+texture = ExtResource( 10 )
+stretch_mode = 4
+
+[node name="Label1" type="Label" parent="Container/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer6/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 489.0
+margin/right = 676.0
+margin/bottom = 790.0
+custom_fonts/font = ExtResource( 7 )
+text = "Selalu fokus dan memperhatikan jalan wajib dilakukan 
+pengendara kapanpun dimanapun. Jangan menyambi 
+berkendara dengan aktifitas lain yang tidak perlu. 
+Sekalipun harus dilakukan dan tidak dapat ditunda, 
+pengendara dapat berhenti sebentar di pinggir jalan. 
+Memperhatikan dan fokus ke jalan akan mengurangi 
+tingkat kecelakaan yang ada di jalan bagi pengendara 
+maupun pejalan kaki."
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="MarginContainer7" type="MarginContainer" parent="Container/VBoxContainer/PanelContainer/HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 3194.0
+margin/top = 0.0
+margin/right = 4014.0
+margin/bottom = 830.0
+custom_constants/margin_right = 59
+custom_constants/margin_top = 20
+custom_constants/margin_left = 22
+custom_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Container/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer7"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 22.0
+margin/top = 20.0
+margin/right = 761.0
+margin/bottom = 810.0
+custom_constants/separation = 20
+alignment = 0
+
+[node name="Label 2" type="Label" parent="Container/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer7/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 739.0
+margin/bottom = 46.0
+custom_fonts/font = ExtResource( 5 )
+text = "Bonceng dengan posisi dan jumlah yang benar"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="TextureFrame" type="TextureFrame" parent="Container/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer7/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 66.0
+margin/right = 739.0
+margin/bottom = 491.0
+texture = ExtResource( 11 )
+stretch_mode = 4
+
+[node name="Label1" type="Label" parent="Container/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer7/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 511.0
+margin/right = 739.0
+margin/bottom = 660.0
+custom_fonts/font = ExtResource( 7 )
+text = "Membonceng dengan posisi yang benar dan sesuai dengan 
+dimensi motor harus dilakukan. Untuk menjaga keamanan 
+dan keselamatan pengguna jalan lain. Dan pengendara
+ juga dapat berkendara dengan nyaman."
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="MarginContainer8" type="MarginContainer" parent="Container/VBoxContainer/PanelContainer/HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4018.0
+margin/top = 0.0
+margin/right = 4810.0
+margin/bottom = 830.0
+custom_constants/margin_right = 59
+custom_constants/margin_top = 20
+custom_constants/margin_left = 67
+custom_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Container/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer8"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 67.0
+margin/top = 20.0
+margin/right = 733.0
+margin/bottom = 810.0
+custom_constants/separation = 20
+alignment = 0
+
+[node name="Label 2" type="Label" parent="Container/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer8/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 666.0
+margin/bottom = 46.0
+custom_fonts/font = ExtResource( 5 )
+text = "Menaati Rambu dan markah jalan"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="TextureFrame" type="TextureFrame" parent="Container/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer8/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 66.0
+margin/right = 666.0
+margin/bottom = 482.0
+texture = ExtResource( 12 )
+stretch_mode = 4
+
+[node name="Label1" type="Label" parent="Container/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer8/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 502.0
+margin/right = 666.0
+margin/bottom = 689.0
+custom_fonts/font = ExtResource( 7 )
+text = "Demi menjaga keamanan dan ketertiban, sebaiknya 
+pengendara tetap memperhatikan rambu dan markah 
+yang ada. Salah satu fungsi rambu dan markah adalah 
+agar pengendara tetap tertib dan mengurangi tingkat 
+kecelakaan di jalan raya."
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="MarginContainer9" type="MarginContainer" parent="Container/VBoxContainer/PanelContainer/HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4814.0
+margin/top = 0.0
+margin/right = 5606.0
+margin/bottom = 830.0
+custom_constants/margin_right = 59
+custom_constants/margin_top = 20
+custom_constants/margin_left = 37
+custom_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Container/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer9"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 37.0
+margin/top = 20.0
+margin/right = 733.0
+margin/bottom = 810.0
+custom_constants/separation = 20
+alignment = 0
+
+[node name="Label 2" type="Label" parent="Container/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer9/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 696.0
+margin/bottom = 46.0
+custom_fonts/font = ExtResource( 5 )
+text = "Menjaga kebersihan"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="TextureFrame" type="TextureFrame" parent="Container/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer9/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 66.0
+margin/right = 696.0
+margin/bottom = 468.0
+texture = ExtResource( 13 )
+stretch_mode = 4
+
+[node name="Label1" type="Label" parent="Container/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer9/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 488.0
+margin/right = 696.0
+margin/bottom = 675.0
+custom_fonts/font = ExtResource( 7 )
+text = "Agar jalanan terlihat bersih dan berkendara pun terasa 
+nyaman, kebersihan harus tetap dijaga sekalipun saat 
+berkendara. Simpan sampah anda sampai menemukan 
+tempat sampah, mulailah dari diri sendiri dan memberi 
+contoh untuk yang lain"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Container/VBoxContainer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 1065.0
+margin/right = 6135.0
+margin/bottom = 1225.0
+custom_constants/separation = 20
+alignment = 0
+
+[node name="MarginContainer4" type="MarginContainer" parent="Container/VBoxContainer/HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 408.0
+margin/bottom = 160.0
+custom_constants/margin_right = 200
+custom_constants/margin_left = 50
+
+[node name="TextureButton" type="TextureButton" parent="Container/VBoxContainer/HBoxContainer/MarginContainer4"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 50.0
+margin/top = 0.0
+margin/right = 208.0
+margin/bottom = 160.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 14 )
+textures/pressed = ExtResource( 15 )
+params/resize_mode = 0
+params/stretch_mode = 0
+
+[node name="TextureButton1" type="TextureButton" parent="Container/VBoxContainer/HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 428.0
+margin/top = 0.0
+margin/right = 589.0
+margin/bottom = 160.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 16 )
+textures/pressed = ExtResource( 17 )
+params/resize_mode = 0
+params/stretch_mode = 0
+
+[node name="TextureButton2" type="TextureButton" parent="Container/VBoxContainer/HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 609.0
+margin/top = 0.0
+margin/right = 768.0
+margin/bottom = 160.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 18 )
+textures/pressed = ExtResource( 19 )
+params/resize_mode = 0
+params/stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Container/VBoxContainer"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/positionContainer = SubResource( 1 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="closer" type="TextureFrame" parent="Container"]
+
+editor/display_folded = true
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 229.0
+margin/right = 800.0
+margin/bottom = 935.0
+texture = ExtResource( 20 )
+stretch_mode = 4
+
+[node name="Panel" type="Panel" parent="Container/closer"]
+
+visibility/opacity = 0.15
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = -229.0
+margin/right = 797.0
+margin/bottom = 1050.0
+
+[node name="yes" type="TextureButton" parent="Container/closer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 66.0
+margin/top = 366.0
+margin/right = 399.0
+margin/bottom = 579.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 21 )
+params/resize_mode = 0
+params/stretch_mode = 0
+
+[node name="no" type="TextureButton" parent="Container/closer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 414.0
+margin/top = 364.0
+margin/right = 698.0
+margin/bottom = 577.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 22 )
+params/resize_mode = 0
+params/stretch_mode = 0
+
+[connection signal="pressed" from="Container/VBoxContainer/HBoxContainer/MarginContainer4/TextureButton" to="." method="_on_TextureButton_pressed"]
+
+[connection signal="pressed" from="Container/VBoxContainer/HBoxContainer/TextureButton1" to="." method="_on_TextureButton1_pressed"]
+
+[connection signal="pressed" from="Container/VBoxContainer/HBoxContainer/TextureButton2" to="." method="_on_TextureButton2_pressed"]
+
+[connection signal="pressed" from="Container/closer/yes" to="." method="_on_yes_pressed"]
+
+[connection signal="pressed" from="Container/closer/no" to="." method="_on_no_pressed"]
+
+

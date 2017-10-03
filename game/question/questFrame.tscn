@@ -1,0 +1,95 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://game/question/questFrame.gd" type="Script" id=1]
+[ext_resource path="res://font/BebasNeue-48.fnt" type="BitmapFont" id=2]
+[ext_resource path="res://font/BebasNeue-36.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://images/layout-popup_06.png" type="Texture" id=4]
+[ext_resource path="res://images/layout-popup_07.png" type="Texture" id=5]
+
+[node name="TextureFrame" type="Panel"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -12.0
+margin/top = -2.0
+margin/right = 819.0
+margin/bottom = 394.0
+script/script = ExtResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 9.0
+one_shot = false
+autostart = false
+
+[node name="Label" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 27.0
+margin/top = 9.0
+margin/right = 67.0
+margin/bottom = 55.0
+custom_fonts/font = ExtResource( 2 )
+text = "0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="text" type="RichTextLabel" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 68.0
+margin/top = 79.0
+margin/right = 742.0
+margin/bottom = 237.0
+custom_fonts/normal_font = ExtResource( 3 )
+bbcode/enabled = true
+bbcode/bbcode = "[fill]Menggunakan perlengkapan dengan lengkap dan benar akan mengurangi kemungkinan buruk yang akan terjadi.[/fill] "
+visible_characters = -1
+
+[node name="TextureButton" type="TextureButton" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 41.0
+margin/top = 212.0
+margin/right = 374.0
+margin/bottom = 425.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 4 )
+params/resize_mode = 0
+params/stretch_mode = 0
+
+[node name="TextureButton1" type="TextureButton" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 459.0
+margin/top = 215.0
+margin/right = 743.0
+margin/bottom = 428.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 5 )
+params/resize_mode = 0
+params/stretch_mode = 0
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+
